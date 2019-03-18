@@ -1,2 +1,0 @@
-# redux
-Created with CodeSandbox

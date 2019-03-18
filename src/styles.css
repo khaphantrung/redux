@@ -1,0 +1,234 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.table-responsive {
+  min-width: 800px;
+  max-width: 1200px;
+}
+
+.game .game-control {
+  width: 30%;
+  height: 100%;
+  margin: 0 auto;
+  border-left: 2px black solid;
+  border-bottom: none;
+  display: flex;
+  position: absolute;
+  right: 0;
+  flex-direction: column;
+  background: white;
+}
+
+.score-table {
+  flex: 2;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+}
+.game-action {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+  height: 100%;
+  border-top: 1px black solid;
+}
+
+.game-action > .btn-draw {
+  width: 100%;
+  border: 1px white solid;
+}
+.game-action > .btn-shuffle,
+.game-action > .btn-reveal {
+  width: 50%;
+  border: none;
+}
+.game-action > .btn-shuffle {
+  border-right: 1px white solid;
+  border-left: 1px white solid;
+  border-bottom: 1px white solid;
+}
+
+.game-action > .btn-reveal {
+  border-right: 1px white solid;
+  border-bottom: 1px white solid;
+}
+
+.game-player-name,
+.game-player-score {
+  display: flex;
+  border: 1px black solid;
+  flex-direction: column;
+  flex: 1;
+}
+.game-player-name > div,
+.game-player-score > div {
+  min-width: 100px;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  align-items: center;
+}
+
+.round-winner-mesaage {
+  margin-bottom: 10px;
+  text-align: center;
+  color: red;
+}
+
+.game-player-name {
+  border-right: none;
+}
+.game-player-name > div,
+.game-player-score > div {
+  border-bottom: 1px black solid;
+}
+.game-player-name > div:last-child,
+.game-player-score > div:last-child {
+  border-bottom: none;
+}
+
+.table-responsive {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  border: 2px black solid;
+  background: url(http://file.vforum.vn/hinh/2016/04/telasm-hinh-nen-hot-girl-viet-nam-6.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: -160px;
+}
+
+/* main game */
+.table-responsive:after {
+  content: "";
+  display: block;
+  padding-bottom: 56.25%;
+}
+
+.game-table,
+.game-popup {
+  width: 70%;
+}
+
+.game .game-table {
+  width: 70%;
+  height: 100%;
+  position: absolute;
+}
+
+.game .player {
+  position: absolute;
+}
+
+.game .player-name {
+  text-align: center;
+  font-weight: bold;
+  background: white;
+  padding: 5px 10px;
+  margin: 0 auto;
+  width: 80px;
+}
+
+.game .player-0 {
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.game .player-2 {
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 10px;
+}
+
+.game .player-1 {
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 10px;
+}
+
+.game .player-3 {
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 10px;
+}
+
+.player-cards > img {
+  width: 80px;
+  min-height: 116px;
+  -webkit-animation: card-animation 2s;
+  animation: card-animation 2s;
+}
+
+.player-cards > img.reveal {
+  width: 80px;
+  -webkit-animation: card-reveal 1s;
+  animation: card-reveal 1s;
+}
+
+@keyframes card-animation {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+    color: red;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes card-reveal {
+  0% {
+    transform: rotateY(90deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+.player-cards {
+  width: 160px;
+}
+
+.player-cards > .player-cards-1 {
+  position: absolute;
+  left: 40px;
+}
+
+.player-cards > .player-cards-2 {
+  position: absolute;
+  left: 80px;
+}
+
+.game-popup {
+  position: absolute;
+  top: 0;
+  background: #5e5d5fbd;
+  height: 100%;
+}
+
+.game-popup .content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+}
+.game-popup .content span {
+  font-size: 32px;
+  font-weight: bold;
+}
+.game-popup .content p {
+  font-size: 15px;
+  text-align: center;
+}
+.game-popup .content button {
+  padding: 10px;
+  width: 100px;
+  align-self: center;
+}
